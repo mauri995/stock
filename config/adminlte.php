@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>ESCODA</b>',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -237,34 +237,136 @@ return [
         ],
 
         // Sidebar items:
-        [
+        /* [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
-        ],
-        [
+        ], */
+        /* [
             'text' => 'blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
-        ],
+        ], */
         [
-            'text'        => 'pages',
+            'text'        => 'Ordenes de Trabajo',
             'url'         => 'admin/pages',
             'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
+            'submenu' => [
+                [
+                    'text' => 'Construcción',
+                    'url'  => '#',
+                    'submenu' => [
+                        [
+                            'text' => 'Confeccionar',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Completar/Cancelar',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Listar',
+                            'url'  => '#',
+                        ],
+                    ],
+                ],
+                [
+                    'text' => 'Reparación',
+                    'url'  => '#',
+                    'submenu' => [
+                        [
+                            'text' => 'Confeccionar',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Completar/Cancelar',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Listar',
+                            'url'  => '#',
+                        ],
+                    ],
+                ],
+                
+                [
+                    'text' => 'Ensamble',
+                    'url'  => '#',
+                    'submenu' => [
+                        [
+                            'text' => 'Confeccionar',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Completar/Cancelar',
+                            'url'  => '#',
+                        ],
+                        [
+                            'text' => 'Listar',
+                            'url'  => '#',
+                        ],
+                    ],
+                ],
+                
+            ]
+            /* 'label'       => 4,
+            'label_color' => 'success', */
         ],
-        ['header' => 'account_settings'],
+        /* ['header' => 'account_settings'], */
         [
-            'text' => 'profile',
+            'text' => 'Stock',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-user',
+            'submenu' => [
+                [
+                    'text' => 'Control de stock',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'Confeccionar Despiece de Herramientas/Predeterminar Materiales',
+                    'url'  => '#',
+                ],
+            ]
+
         ],
         [
-            'text' => 'change_password',
+            'text' => 'Egresos y Etiquetas',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
         [
+            'text' => 'Horarios Maquinas',
+            'url'  => 'admin/settings',
+            'icon' => 'fas fa-fw fa-lock',
+        ],
+        [
+            'text' => 'Proveedores',
+            'url'  => 'admin/settings',
+            'icon' => 'fas fa-fw fa-lock',
+            'submenu' => [
+                [
+                    'text' => 'Listar Proveedores',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'Listar Artículos',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'Listar Facturas',
+                    'url'  => '#',
+                ],
+                [
+                    'text' => 'Ingresar Facturas',
+                    'url'  => '#',
+                ],
+            ]
+        ],
+        [
+            'text' => 'Datos',
+            'url'  => 'admin/settings',
+            'icon' => 'fas fa-fw fa-lock',
+        ],
+        /* [
             'text'    => 'multilevel',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
@@ -301,8 +403,8 @@ return [
                     'url'  => '#',
                 ],
             ],
-        ],
-        ['header' => 'labels'],
+        ], */
+        /* ['header' => 'labels'],
         [
             'text'       => 'important',
             'icon_color' => 'red',
@@ -317,7 +419,7 @@ return [
             'text'       => 'information',
             'icon_color' => 'cyan',
             'url'        => '#',
-        ],
+        ], */
     ],
 
     /*
