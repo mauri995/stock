@@ -257,7 +257,7 @@ return [
                     'submenu' => [
                         [
                             'text' => 'Confeccionar',
-                            'url'  => '#',
+                            'route'  => 'construccion.confeccionar',
                         ],
                         [
                             'text' => 'Completar/Cancelar',
