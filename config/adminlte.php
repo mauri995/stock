@@ -315,7 +315,7 @@ return [
         [
             'text' => 'Stock',
             'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-fw fa-box-open',
             'submenu' => [
                 [
                     'text' => 'Control de stock',
@@ -331,17 +331,17 @@ return [
         [
             'text' => 'Egresos y Etiquetas',
             'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-fw fa-tags',
         ],
         [
             'text' => 'Horarios Maquinas',
             'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-fw fa-clock',
         ],
         [
             'text' => 'Proveedores',
             'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-fw fa-money-check-alt',
             'submenu' => [
                 [
                     'text' => 'Listar Proveedores',
@@ -364,7 +364,7 @@ return [
         [
             'text' => 'Datos',
             'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'icon' => 'fas fa-fw fa-database',
         ],
         /* [
             'text'    => 'multilevel',
