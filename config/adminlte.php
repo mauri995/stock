@@ -335,7 +335,7 @@ return [
         ],
         [
             'text' => 'Horarios Maquinas',
-            'url'  => 'admin/settings',
+            'route'  => 'horarios.maquinas',
             'icon' => 'fas fa-fw fa-clock',
         ],
         [
