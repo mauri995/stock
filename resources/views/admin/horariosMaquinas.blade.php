@@ -14,15 +14,17 @@
     </div>
 
     <div class="card-body">
-    <form action="">
+    
         <div class="row mb-2"> 
-            <h2 class="col mr-2">00:00:00</h2>
-            <button class=" btn btn-primary  col mr-2">Comenzar</button>
-            <button class=" btn btn-primary  col mr-2">Terminar</button>
+            <h2 id="screen" class="col mr-2">00:00:00</h2>
+            <button onclick="start()" class=" btn btn-primary  col mr-2">Comenzar</button>
+            <button onclick="stop()" class=" btn btn-primary  col mr-2">Terminar</button>
         </div>
-    </form>
+   
     </div>
 </div>
+
+<script src="{{ asset('js/cronometro.js') }}"></script>
 @stop
 
 @section('css')
