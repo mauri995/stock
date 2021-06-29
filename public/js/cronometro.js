@@ -18,12 +18,13 @@ window.onload = function() {
           cc = Math.round(acumularTime2.getMilliseconds()/10);
           ss = acumularTime2.getSeconds();
           mm = acumularTime2.getMinutes();
-          hh = acumularTime2.getHours()-21;
+          /* hh = acumularTime2.getHours()-21; */
           if (cc < 10) {cc = "0"+cc;}
           if (ss < 10) {ss = "0"+ss;} 
           if (mm < 10) {mm = "0"+mm;}
-          if (hh < 10) {hh = "0"+hh;}
-          pantalla.innerHTML = hh+" : "+mm+" : "+ss+" : "+cc;
+          /* if (hh < 10) {hh = "0"+hh;} */
+          /* hh+" : "+ */
+          pantalla.innerHTML = mm+" : "+ss+" : "+cc;
           }
  
  function stop () { 
@@ -51,5 +52,5 @@ window.onload = function() {
              isMarch = false;
              }
           acumularTime = 0;
-          pantalla.innerHTML = "00 : 00 : 00 : 00";
+          pantalla.innerHTML = "00 : 00 : 00";
           }
