@@ -3,26 +3,36 @@
 @section('title', 'Horarios Maquinas')
 
 @section('content_header')
-   Orden de trabajo xxxx
+<div class="container">
+<div class="row">
+  <h2 class="col"> Orden de trabajo xxxx </h2>
+  <div class="col"></div>
+  <div class="col" id="contadorPiezas">Piezas = </div>
+  <div ></div>
+  
+</div>
+</div>
 @stop
 
 @section('content')
-<div class="card card-secondary">
+<div id="pasos">
+    <div class="card card-secondary" >
 
-    <div class="card-header">
-    <h3 class="card-title">Paso x</h3>
-    </div>
-
-    <div class="card-body">
-    
-        <div class="row mb-2"> 
-            <h2 id="screen" class="col mr-2">00:00:00</h2>
-            <button onclick="start()" class=" btn btn-primary  col mr-2">Comenzar</button>
-            <button onclick="stop()" class=" btn btn-primary  col mr-2">Pausa</button>
-            <button onclick="resume()" class=" btn btn-primary  col mr-2">Continuar</button>
-            <button onclick="reset()" class=" btn btn-primary  col mr-2">Terminar</button>
+        <div class="card-header">
+        <h2 class="card-title">Paso x</h3>
         </div>
-   
+
+        <div class="card-body">
+        
+            <div class="row mb-2"> 
+                <h2 id="screen" class="col mr-2">00:00:00</h2>
+                <button onclick="start()" class=" btn btn-primary  col mr-2">Comenzar</button>
+                <button onclick="stop()" class=" btn btn-primary  col mr-2">Pausa</button>
+                <button onclick="resume()" class=" btn btn-primary  col mr-2">Continuar</button>
+                <button onclick="reset()" class=" btn btn-primary  col mr-2">Terminar</button>
+            </div>
+    
+        </div>
     </div>
 </div>
 
