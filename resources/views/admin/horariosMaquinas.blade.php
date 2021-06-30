@@ -18,7 +18,9 @@
         <div class="row mb-2"> 
             <h2 id="screen" class="col mr-2">00:00:00</h2>
             <button onclick="start()" class=" btn btn-primary  col mr-2">Comenzar</button>
-            <button onclick="stop()" class=" btn btn-primary  col mr-2">Terminar</button>
+            <button onclick="stop()" class=" btn btn-primary  col mr-2">Pausa</button>
+            <button onclick="resume()" class=" btn btn-primary  col mr-2">Continuar</button>
+            <button onclick="reset()" class=" btn btn-primary  col mr-2">Terminar</button>
         </div>
    
     </div>

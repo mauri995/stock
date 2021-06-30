@@ -1,10 +1,15 @@
 window.onload = function() {
     pantalla = document.getElementById("screen");
- }
- var isMarch = false; 
+   }
+   var isMarch = false; 
+   var isStart = false; 
+   
  var acumularTime = 0; 
  function start () {
-          if (isMarch == false) { 
+          if (isMarch == false & isStart == false) { 
+            isStart = true; 
+            timeStart = new Date();
+            console.log("Empieza: " +timeStart);
              timeInicial = new Date();
              control = setInterval(cronometro,10);
              isMarch = true;
@@ -28,14 +33,20 @@ window.onload = function() {
           }
  
  function stop () { 
+
           if (isMarch == true) {
+            timeStop = new Date();
+            console.log("Pausa: " +timeStop);
              clearInterval(control);
              isMarch = false;
              }     
           }      
  
  function resume () {
-          if (isMarch == false) {
+
+          if (isMarch == false & isStart == true) {
+            timeResume = new Date();
+            console.log("Continua: " +timeResume);
              timeActu2 = new Date();
              timeActu2 = timeActu2.getTime();
              acumularResume = timeActu2-acumularTime;
@@ -47,10 +58,16 @@ window.onload = function() {
           }
  
  function reset () {
+      if(isStart == true){
           if (isMarch == true) {
              clearInterval(control);
              isMarch = false;
              }
+
+             timeReset = new Date();
+            console.log("Termina: " +timeReset);
+            isStart = false;
           acumularTime = 0;
           pantalla.innerHTML = "00 : 00 : 00";
           }
+         }
