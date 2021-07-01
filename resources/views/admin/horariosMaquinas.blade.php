@@ -7,7 +7,7 @@
 <div class="row">
   <h2 class="col"> Orden de trabajo xxxx </h2>
   <div class="col"></div>
-  <div class="col" id="contadorPiezas">Piezas = </div>
+  <div class="col" id="contadorPiezas"> <h2>Piezas = 0</h2></div>
   <div ></div>
   
 </div>

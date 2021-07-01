@@ -323,7 +323,7 @@ return [
                 ],
                 [
                     'text' => 'Confeccionar Despiece de Herramientas/Predeterminar Materiales',
-                    'url'  => '#',
+                    'route'  => 'confeccionar.despiece',
                 ],
             ]
 

@@ -70,9 +70,9 @@ window.onload = function() {
             isStart = false;
           acumularTime = 0;
           pantalla.innerHTML = "00 : 00 : 00";
-          contPiezas.getElementById('contadorPiezas');
+          contPiezas = document.getElementById('contadorPiezas');
           piezas++;
-          contPiezas.innerHTML("Piezas =" + piezas);
+          contPiezas.innerHTML = "<h2>Piezas = "+ piezas + "</h2>";
 
 
           }
