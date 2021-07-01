@@ -2,7 +2,8 @@ window.onload = function() {
     pantalla = document.getElementById("screen");
    }
    var isMarch = false; 
-   var isStart = false; 
+   var isStart = false;
+   var piezas =0; 
    
  var acumularTime = 0; 
  function start () {
@@ -69,5 +70,11 @@ window.onload = function() {
             isStart = false;
           acumularTime = 0;
           pantalla.innerHTML = "00 : 00 : 00";
+          contPiezas = document.getElementById('contadorPiezas');
+          piezas++;
+          contPiezas.innerHTML = "<h2>Piezas = "+ piezas + "</h2>";
+
+
           }
+
          }
