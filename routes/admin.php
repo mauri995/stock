@@ -7,5 +7,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('', [HomeController::class,'index']);
 Route::get('/ordenes/construccion/confeccionar',[ConstruccionController::class,'index'])->name('construccion.confeccionar');
-Route::post('/ordenes/construccion/confeccionar',[ConstruccionController::class,'piezas'])->name('construccion.confeccionar');
+Route::post('/admin/ordenes/construccion/confeccionar',[ConstruccionController::class,'piezas']);
+
 Route::get('/horariosmaquinas',[HorariosMaquinasController::class,'index'])->name('horarios.maquinas');

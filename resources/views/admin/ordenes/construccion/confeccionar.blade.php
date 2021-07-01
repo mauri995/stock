@@ -3,7 +3,6 @@
 @section('title', 'Confeccionar')
 
 @section('content_header')
-
 @stop
 
 @section('content')
@@ -19,7 +18,8 @@
       <div class="col-md-6">.col-md-6</div>
     </div> --}}
 
-        <form>
+        <form id="formulario">
+            @csrf
             <div class="card-body">
                 <div class="container">
                     <div class="row mb-2">
@@ -68,13 +68,13 @@
     </div>
 
 
-    <script src="{{ asset('js/ordenes/construccion.js') }}"></script>
+    
 @stop
 
 @section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
+{{--     <link rel="stylesheet" href="/css/admin_custom.css"> --}}
 @stop
 
 @section('js')
-
+<script src="{{ asset('js/ordenes/construccion.js') }}"></script>
 @stop
