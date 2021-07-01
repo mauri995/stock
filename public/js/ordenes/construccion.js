@@ -3,46 +3,67 @@
     e.preventDefault(); //para evitar que se recargue la pagina
 
     const datos = new FormData(document.getElementById('formulario'));
-    fetch('/admin/ordenes/construccion/confeccionar/', {
-
+    fetch('/admin/ordenes/construccion/confeccionar', {
+        dataType: 'JSON',
         method: 'POST',
         body: datos,
     })
-        .then(res => res.json())
+
         .then(data => {
-            console.log(data);
+            console.log(data.text);
         })
 }, true) */
 
 
+/* $("#piezas").change(function () {
+    $.ajax({
+        url: "/admin/ordenes/construccion/confeccionar/",
+        method: "POST",
+        data: $("#formulario").serialize()
+    }).done(function (res) {
+        alert(res);
 
-$(document).ready(function() {
-    $(".btn-submit").click(function(e){
-        e.preventDefault();
-
-        var _token = $("input[name='_token']").val();
-        var email = $("#email").val();
-        var pswd = $("#pwd").val();
-        var address = $("#address").val();
-
-        $.ajax({
-            url: "{{ route('ajax.request.store') }}",
-            type:'POST',
-            data: {_token:_token, email:email, pswd:pswd,address:address},
-            success: function(data) {
-              printMsg(data);
+    })
+}); */
+/* $("#piezas").change(function(e){
+    e.preventDefault();
+    $.ajax({
+        url: "/admin/ordenes/construccion/confeccionar/",
+        method: "POST",
+        dataType: "json",
+        success: function(data){
+            //Aquí validas lo que trae el nodo success ( $json['success'] )
+            if( data.success ){
+                //Como el JSON trae un mensaje, lo puedes imprimir
+                console.log('ok');
             }
-        });
-    }); 
 
-    function printMsg (msg) {
-      if($.isEmptyObject(msg.error)){
-          console.log(msg.success);
-          $('.alert-block').css('display','block').append('<strong>'+msg.success+'</strong>');
-      }else{
-        $.each( msg.error, function( key, value ) {
-          $('.'+key+'_err').text(value);
-        });
-      }
-    }
-});
+            else{
+                //Si te regresa un TRUE entonces ya puedes recargar
+                console.log('not okay');
+            }
+        },
+        error: function(data){
+            console.log('error')
+        }
+    });
+  }); */
+
+/* $("#piezas").change(function(e){
+    e.preventDefault();
+
+    let _token = $("input[name='_token']").val();
+    let pieza = $("#piezas").val();
+    let material= $("#material").val();
+
+    $.ajax({
+        url: "/piezas",
+        type:'POST',
+        data: {_token:_token, pieza:pieza},
+        success: function(data) {
+          console.log(data);
+        }
+    });
+});  */
+
+

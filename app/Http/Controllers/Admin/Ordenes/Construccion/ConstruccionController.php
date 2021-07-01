@@ -20,11 +20,9 @@ class ConstruccionController extends Controller
   }
 
 
-  public function piezas()
+  public function piezas(Request $request)
   {
-    if (request()->getMethod() == 'POST') {
-     return json_encode("hola");
-    }
+    return 'Hola!';
   }
 
   /*  public function horasAsincronas()

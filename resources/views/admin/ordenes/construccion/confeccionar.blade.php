@@ -18,7 +18,7 @@
       <div class="col-md-6">.col-md-6</div>
     </div> --}}
 
-        <form id="formulario">
+        <form id="formulario" method="POST" action="">
             @csrf
             <div class="card-body">
                 <div class="container">
@@ -37,18 +37,15 @@
                     </div>
                     <div class="row mb-2">
                         <label class=" col mr-2">Cantidad a realizar</label>
-                        <input type="number" class="form-control col mr-2"
-                        min="0" 
-                        id="">
+                        <input type="number" class="form-control col mr-2" min="0" id="">
                         <button type="button" class="btn btn-secondary col ">Procedimiento</button>
                     </div>
                 </div>
                 <div class="container">
                     <div class="row mb-2">
                         <label class=" col mr-2">Material</label>
-                        <input type="text" class="form-control col mr-2" placeholder="CodigoMaterial Material Dimension Calidad" 
-           
-                        id="material" name="material">
+                        <input type="text" class="form-control col mr-2"
+                            placeholder="CodigoMaterial Material Dimension Calidad" id="material" name="material">
 
                         <button type="button" class="btn btn-secondary col ">Buscar</button>
                     </div>
@@ -65,16 +62,29 @@
                 {{-- <button type="submit" class="btn btn-primary">Submit</button> --}}
             </div>
         </form>
+       
     </div>
 
 
-    
+
 @stop
 
 @section('css')
-{{--     <link rel="stylesheet" href="/css/admin_custom.css"> --}}
+    {{-- <link rel="stylesheet" href="/css/admin_custom.css"> --}}
 @stop
 
 @section('js')
-<script src="{{ asset('js/ordenes/construccion.js') }}"></script>
+    {{-- <script src="{{ asset('js/ordenes/construccion.js') }}"></script> --}}
+    <script>
+        $("#piezas").change(function() {
+            $.ajax({
+                url: "/admin/ordenes/construccion/confeccionar/",
+                method: "POST",
+                data: $("#formulario").serialize()
+            }).done(function(res) {
+                alert(res);
+    
+            })
+        });
+    </script>
 @stop
